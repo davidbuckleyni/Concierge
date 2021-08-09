@@ -1,14 +1,7 @@
 Be in Concierge.Dal Project
-
-Add-Migration CategoriesWork  -OutputDir "Data/Migrations" -Context ConciergeDBContext
-
-
- than one DbContext was found. Specify which one to use. Use the '-Context' parameter for PowerShell commands and the '--context' parameter for dotnet commands.
-Update-Database -Context ConciergeDBContext
-
- Update-Database -Context ConciergeDBContext
+add-migration addBuildingtable -verbose
 
 
-
-Pm< Script-Migration -Context CellaDBContext
-© 2021 GitHub, Inc.
+ Update-Database  
+ 
+  
