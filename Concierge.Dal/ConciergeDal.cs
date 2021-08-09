@@ -15,6 +15,5 @@ namespace Concierge.Dal
             db = dbContext;
         }
 
-        public 
-    }
+     }
 }
