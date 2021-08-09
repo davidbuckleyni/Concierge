@@ -1,7 +1,6 @@
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center"> Project Concierge</h3>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
  
 Project Concierge is a full on building managment solution with api and web site and phone application.
 This could be also used for hotels
