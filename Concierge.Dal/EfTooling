@@ -1,7 +1,13 @@
 Be in Concierge.Dal Project
-add-migration addBuildingtable -verbose
+add-migration modelsappsettings --context ApplicationDBContext -verbose
 
 
- Update-Database  
- 
-  
+
+ dotnet ef migrations add FirstCreate  -p Concierge.Dal -c ApplicationDBContext
+
+ dotnet ef database update --project Concierge.Dal  --c ConciergeDBContext
+
+  dotnet ef migrations add MigrationName -s Concierge.Dal -p DbContextProject
+
+
+ EntityFrameworkCore\Add-Migration modelsappsettings --context ConciergeDBContext -verbose

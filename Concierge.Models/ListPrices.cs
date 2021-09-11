@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace Concierge.Models
 {
-   public    class Amenitie
+    public class ListPrices
     {
         public int? Id { get; set; }
 
-        public Rooms? Rooms { get; set; }
+        public string? Name { get; set; }
 
-        public string? Description { get; set; }
+        public decimal CurrencyName { get; set; }
 
-        public DateOnly? StartDate { get; set; }
 
-        public DateOnly? EndDate { get; set; }
+        public decimal? Price { get; set; }
 
-        public bool? isAvailable { get; set; }
 
         public bool? isDeleted { get; set; }
 
@@ -27,7 +25,6 @@ namespace Concierge.Models
         public DateTime? LastModifiedBy { get; set; }
 
         public DateTime? CreateDate { get; set; }
-
-
+        public DateTime? UpdateDate {  get; set;}
     }
 }

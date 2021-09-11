@@ -10,10 +10,15 @@ namespace Concierge.BAL
     {
         public enum SalesOrderTypeEnum
         {
-            Room = 1,
+            SalesOrder=0,
+            Booking=1,
             Resturant = 2,
             Bar = 3,
-            Ammentites = 4
+            Ammentites = 4,
+            Gym=5,
+            Spa=6,
+            TakeAway=7        
+
 
         }
 

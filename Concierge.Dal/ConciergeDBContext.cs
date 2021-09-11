@@ -1,24 +1,34 @@
 ﻿using System;
-using System.Data.Entity;
+using Concierge.Dal.Configuration;
 using Concierge.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace Concierge.Dal
 {
-    public class ConciergeDBContext : IdentityDbContext<ApplicationUser>
+    public class ConciergeDBContext : DbContext
     {
- 
-
+      
         public ConciergeDBContext(DbContextOptions<ConciergeDBContext> options)
           : base(options)
         {
 
         }
-        public Microsoft.EntityFrameworkCore.DbSet<Building> Buildings { get; set; }
-        public Microsoft.EntityFrameworkCore.DbSet<Person> Person { get; set; }
+        public DbSet<AppSettings> Appsettings { get; set; }
 
-        public Microsoft.EntityFrameworkCore.DbSet<Rooms> Rooms { get; set; }
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<Rooms> Rooms { get; set; }
+
+
+        public DbSet<StockItems> StockItem { get; set; }
+
+        public DbSet<SalesOrder> SalesOrders { get; set; }
+
+        public DbSet<SalesOrderItems> SalesOrderItems { get; set; }
+        public DbSet<Tables> Tables { get; set; }
+
+        public DbSet<Amenitie> Amenities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -16,10 +16,10 @@ namespace Concierge.Dal
             db = dbContext;
         }
 
-        public Rooms GetSingleRoom(int roomId)
+        public Rooms? GetSingleRoom(int roomId)
         {
-            var test= db.Rooms.GetSingleRoom(roomId)
-                }
+            return db.Rooms.Where(w=>w.Id==roomId).FirstOrDefault();            
+        }
 
      }
 }

@@ -15,6 +15,9 @@ namespace Concierge.Models
 
         public int? Sleeps { get; set; }
 
+        public Rooms? Rooms { get; set; }
+
+        public Amenitie? Amenities { get; set; }
 
         public BedTypeEnum? Type { get; set; }
 
@@ -25,5 +28,6 @@ namespace Concierge.Models
         public DateTime? LastModifiedBy { get; set; }
 
         public DateTime? CreateDate { get; set; }
+        public DateTime? UpdateDate { get; set; }
     }
 }

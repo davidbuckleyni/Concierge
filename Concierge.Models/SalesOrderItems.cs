@@ -27,7 +27,13 @@ namespace Concierge.Models
 
         public string? Description { get; set; }
 
-        public string? Qty { get; set; }
+        public int? Qty { get; set; }
+
+        public decimal? UnitPrice { get; set; }
+
+        public decimal? LineTotal { get { return Qty * UnitPrice; } }
+
+        public decimal? Total { get; set; }
 
         public StockItems? StockItem { get; set; }
 
@@ -41,6 +47,6 @@ namespace Concierge.Models
         public DateTime? LastModifiedBy { get; set; }
 
         public DateTime? CreateDate { get; set; }
-
+        public DateTime? UpdateDate { get; set; }
     }
 }

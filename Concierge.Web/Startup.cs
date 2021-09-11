@@ -1,6 +1,9 @@
+using Concierge.Dal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,7 +26,16 @@ namespace Concierge.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ConciergeDBContext>
+     (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Transient);
+            services.AddIdentity<IdentityUser, IdentityRole>()
+     .AddEntityFrameworkStores<ConciergeDBContext>();
+            services.AddHttpContextAccessor();
+            services.AddTransient<ConciergeDBContext>();
+
             services.AddControllersWithViews();
+          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

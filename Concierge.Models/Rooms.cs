@@ -14,9 +14,12 @@ namespace Concierge.Models
         public string? Name { get; set; }
 
         public int? Sleeps { get; set; }
-        public virtual ICollection<Bed>? Beds { get; set; }
 
-        public virtual ICollection<Amenitie>? Amenities {  get; set; }
+        public Rooms? AdjacentRooms { get; set; }
+        
+        public  ICollection<Bed>? Beds { get; set; }
+
+        public  ICollection<Amenitie>? Amenities {  get; set; }
 
         public bool? isDeleted { get; set; }
 
@@ -25,5 +28,6 @@ namespace Concierge.Models
         public DateTime? LastModifiedBy { get; set; }
 
         public DateTime? CreateDate { get; set; }
+        public DateTime? UpdateDate { get; set; }
     }
 }
