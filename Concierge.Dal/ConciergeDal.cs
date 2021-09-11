@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Concierge.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Concierge.Dal.Extensions;
 namespace Concierge.Dal
 {
     public class ConciergeDal
@@ -14,6 +15,11 @@ namespace Concierge.Dal
         {
             db = dbContext;
         }
+
+        public Rooms GetSingleRoom(int roomId)
+        {
+            var test= db.Rooms.GetSingleRoom(roomId)
+                }
 
      }
 }

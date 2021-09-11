@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Concierge.Models.Enums;
 
 namespace Concierge.Models
 {
-   public  class Building
+    public class StockItems
     {
-
         public int Id { get; set; }
 
-        public BuildingTypeEnum Type { get; set; }
+        public string Name {  get; set; }
 
-        public string? Name { get; set; }
 
-        public string? Description { get; set; }
+        public string Description {  get; set; }
 
+        public int? Type {  get; set; }
+ 
         public bool? isDeleted { get; set; }
 
         public bool? isActive { get; set; }

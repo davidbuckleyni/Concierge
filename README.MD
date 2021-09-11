@@ -6,6 +6,8 @@ Project Concierge is a full on building managment solution with api and web site
 This could be also used for hotels
 The project will allow air b n b style mangament to do the following.
 
+This can also be used for hotels and resturants as a bar / table manager
+
 Here's why:
 * listing of properties
 * Assinging to staff to properties
@@ -15,6 +17,9 @@ Here's why:
 * Bill managment for properties under your portfollio.
 * Manage Arrivals and Dpeartures
 * Order Cleaning Services
+* Food Ordering abilites for small takeways/ resturants /bars
+* Table ordering for safe covid delivery to customers
+
 
 
 Front End 

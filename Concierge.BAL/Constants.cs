@@ -2,7 +2,7 @@
 
 namespace Concierge.BAL
 {
-    public class Class1
+    public class Constants
     {
     }
 }

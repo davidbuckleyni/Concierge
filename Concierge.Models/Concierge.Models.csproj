@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Concierge.BAL\Concierge.BAL.csproj" />
+  </ItemGroup>
+
 </Project>

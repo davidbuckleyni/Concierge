@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Concierge.BAL.Enums;
 
 namespace Concierge.Models
 {
@@ -12,8 +13,17 @@ namespace Concierge.Models
 
         public string? Name { get; set; }
 
-        public string? NumberOfRooms { get; set; }
+        public int? Sleeps { get; set; }
+        public virtual ICollection<Bed>? Beds { get; set; }
 
-         
+        public virtual ICollection<Amenitie>? Amenities {  get; set; }
+
+        public bool? isDeleted { get; set; }
+
+        public bool? isActive { get; set; }
+
+        public DateTime? LastModifiedBy { get; set; }
+
+        public DateTime? CreateDate { get; set; }
     }
 }

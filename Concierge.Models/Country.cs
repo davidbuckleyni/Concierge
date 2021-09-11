@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Concierge.Models.Enums;
 
 namespace Concierge.Models
 {
-   public  class Building
+   public  class Country
     {
 
-        public int Id { get; set; }
+        public int ID { get; set; }
+        public int Code { get; set; }
 
-        public BuildingTypeEnum Type { get; set; }
+        public string? IsoCode { get; set; }
 
-        public string? Name { get; set; }
-
-        public string? Description { get; set; }
+        public string? Flag { get; set; }
 
         public bool? isDeleted { get; set; }
 
@@ -25,6 +23,5 @@ namespace Concierge.Models
         public DateTime? LastModifiedBy { get; set; }
 
         public DateTime? CreateDate { get; set; }
-
     }
 }
